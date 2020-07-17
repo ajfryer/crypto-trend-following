@@ -1,0 +1,324 @@
+@import 'base.css';
+
+/*
+TABLE OF CONTENTS
+=================
+- global
+- nav
+- #value, #proof
+- #call-to-action
+
+- tablet media query
+- desktop media query
+*/
+
+/*
+global
+*/
+body {
+  background-color: var(--white);
+}
+
+/*
+nav
+*/
+nav {
+  border-bottom: 1px solid var(--lightGray);
+}
+
+/*
+header styles
+*/
+header {
+  background-color: var(--lightBlue);
+}
+
+header .content {
+  padding: 0 0.5rem;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem 0;
+}
+
+header h1 {
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  font-weight: 200;
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+header h1 span {
+  font-weight: 700;
+  text-transform: titlecase;
+  font-size: 115%;
+}
+
+header p.valueprop {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+}
+
+header p.valueprop span {
+  color: var(--green);
+  font-weight: 500;
+}
+
+header .button {
+  display: inline-flex;
+  height: 3.5rem;
+  align-items: center;
+}
+
+/*
+value and proof sections
+*/
+#value,
+#proof {
+  background-color: var(--white);
+}
+
+#value .content,
+#proof .content {
+  padding: 4rem 0.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--lightBlue);
+}
+
+#value .txt,
+#proof .txt {
+  padding: 2rem 1rem;
+  background: var(--lightBlue);
+  border-radius: 10px;
+}
+
+#value .img,
+#proof .img {
+  margin-bottom: 1rem;
+}
+
+#value img,
+#proof img {
+  width: 100%;
+  height: auto;
+}
+
+#value h2,
+#proof h2 {
+  line-height: 2.25rem;
+  text-align: center;
+  color: var(--blue);
+}
+
+#value p,
+#proof p {
+  line-height: 1.75rem;
+}
+
+#value span,
+#proof span {
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/*
+call to action section
+*/
+#call-to-action {
+  background-color: var(--lightBlue);
+}
+
+#call-to-action .content {
+  max-width: 1440px;
+  padding: 3rem 0.5rem;
+  margin: 0 auto;
+}
+
+#call-to-action .card {
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--white);
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#call-to-action h2 {
+  text-align: center;
+  line-height: 2.25rem;
+  margin-bottom: 0rem;
+}
+
+#call-to-action h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#call-to-action p {
+  margin: 0rem auto 0rem auto;
+  line-height: 1.75rem;
+}
+
+#call-to-action img {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+#call-to-action .button {
+  margin: 3rem auto 1rem auto;
+}
+
+/*
+tablet media queries
+*/
+@media (min-width: 768px) {
+  /* nav */
+  nav a:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  nav a.brand {
+    margin-right: auto;
+  }
+
+  /* header */
+  header .img,
+  header .txt {
+    max-width: 66%;
+    margin: 0 auto;
+  }
+
+  /* #value, #proof */
+  #value .img,
+  #proof .img {
+    max-width: 50%;
+    margin: 0 auto 1rem auto;
+  }
+
+  #value .txt,
+  #proof .txt {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  /* #call-to-action */
+  #call-to-action .card {
+    width: 400px;
+    margin: 1rem auto;
+  }
+}
+
+/*
+desktop media queries
+*/
+@media (min-width: 1280px) {
+  header .content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-direction: row-reverse;
+  }
+
+  header .txt {
+    align-self: center;
+  }
+
+  header .img {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 0;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  header p.valueprop {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 2.5rem;
+    margin: 1rem 0rem 2rem 0;
+  }
+
+  #value h2,
+  #proof h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  #value .content,
+  #proof .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 6rem 1rem;
+  }
+
+  #proof .content {
+    flex-direction: row-reverse;
+  }
+
+  #value p,
+  #proof p {
+    font-size: 1.25rem;
+    line-height: 175%;
+  }
+
+  #value .txt,
+  #proof .txt {
+    width: 50%;
+    margin: 0;
+  }
+
+  #value .img,
+  #proof .img {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 0;
+  }
+
+  #call-to-action .content {
+    padding: 6rem 1rem;
+  }
+
+  #call-to-action .cards {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #call-to-action h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  #call-to-action .card {
+    margin: 0;
+    padding: 2rem;
+  }
+
+  #call-to-action .button {
+    margin: 3rem auto 1rem auto;
+    max-width: 375px;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

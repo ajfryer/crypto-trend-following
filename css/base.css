@@ -1,0 +1,177 @@
+@import 'colors.css';
+@import 'fonts.css';
+@import 'buttons.css';
+@import 'utilities.css';
+
+/*
+global
+*/
+:root {
+  --aqua: #7fdbff;
+  --black: #54575a;
+  --blue: #0074d9;
+  --lightBlue: #e6f1fc;
+  --lightestBlue: #f8fbfe;
+  --fuschsia: #f012be;
+  --green: #3d9970;
+  --lime: #01ff70;
+  --maroon: #85144b;
+  --navy: #001f3f;
+  --olive: #3d9970;
+  --orange: #ff851b;
+  --purple: #b10dc9;
+  --red: #ff4136;
+  --silver: #ddd;
+  --lightGray: #ececed;
+  --gray: #aaa;
+  --darkgray: #8b8b8b;
+  --teal: #39cccc;
+  --white: #fff;
+  --yellow: #ffe79a;
+  --breakpoint-desktop: 1024px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+  color: var(--navy);
+  background-color: var(--lightBlue);
+  font-weight: 400;
+}
+
+a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.button {
+  display: block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 10px 16px;
+  line-height: 1.33;
+  border-radius: 4px;
+  color: var(--white);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  text-decoration: none;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  border-color: var(--blue);
+  background-color: transparent;
+  color: var(--blue);
+}
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+/*
+nav
+*/
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  z-index: 1;
+  transition: visibility 2s ease-in-out;
+}
+
+nav .content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+nav a:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+nav a.brand {
+  margin-right: auto;
+  letter-spacing: 0px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+nav .brand img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+/*
+footer
+*/
+footer {
+  background-color: var(--navy);
+  color: var(--lightBlue);
+}
+
+footer .content {
+  padding: 6rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer section:not(:last-child) {
+  margin: 2rem auto 4rem auto;
+}
+
+footer h2 {
+  text-align: center;
+  line-height: 2.25rem;
+  margin-bottom: 3rem;
+}
+
+footer h3 {
+  text-align: left;
+}
+
+footer p {
+  line-height: 1.75rem;
+}
+
+footer hr {
+  border-color: var(--darkgray);
+}
+
+footer a {
+  color: var(--blue);
+}
+
+/*
+tablet media queries
+*/

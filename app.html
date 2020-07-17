@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Crypto Trend Following</title>
+    <link rel="shortcut icon" href="#" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,200,300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body id="body">
+    <nav id="nav">
+      <div class="content">
+        <a href="index.html" class="brand" id="">
+          <img src="img/logo.svg" alt="CTF logo" />
+          CTF
+        </a>
+        <a href="#footer" class="page" id="">
+          About
+        </a>
+      </div>
+    </nav>
+
+    <header></header>
+
+    <section id="form">
+      <div class="content">
+        <form id="strategy-form" action="">
+          <fieldset>
+            <label for="symbol" class=""> Crypto<br />Coin </label>
+            <select name="symbol" id="symbol" required>
+              <option value="btc">btc</option>
+              <option value="eth">eth</option>
+              <option value="ltc">ltc</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <label for="lookback" class="">Lookback<br />(10-365) </label>
+            <input
+              type="number"
+              id="lookback"
+              name="lookback"
+              min="10"
+              max="365"
+              value="260"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <label for="volatility">Volatility <br />(0 - 1)</label>
+            <input
+              type="number"
+              id="volatility"
+              name="volatility"
+              min="0"
+              max="1"
+              step="0.05"
+              value=".65"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <label for="leverage">Leverage <br />(1-10)</label>
+            <input
+              type="number"
+              id="leverage"
+              name="leverage"
+              min="1"
+              max="4"
+              value="1"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <label for="shorting">Allow<br />Shorting?</label>
+            <input type="checkbox" id="shorting" name="shorting" />
+          </fieldset>
+          <fieldset>
+            <button id="custom-strategy-button" class="button">
+              Build Strategy
+            </button>
+            <button id="starter-strategy-button" class="button secondary">
+              Starter Strategy
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="container">
+        <div class="card">
+          <h4>Current Allocation</h4>
+          <p class="message">
+            Nothing to see here yet. Click Build Strategy or Starter Strategy to
+            get started.
+          </p>
+          <div class="allocation-container">
+            <p id="current-position"></p>
+            <canvas id="allocation-chart"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Historical Backtest</h4>
+          <p class="message">
+            Nothing to see here yet. Click Build Strategy or Starter Strategy to
+            get started.
+          </p>
+          <div class="backtest-container">
+            <canvas id="backtest-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="content">
+        <h2>2020 Crypto Trend Following</h2>
+
+        <section>
+          <h3>Aknowledgements</h3>
+          <hr />
+          <p>
+            This is a free site powered by the terrific
+            <a href="https://www.alphavantage.co/">alphaVantage api!</a> They
+            provide all the market data and I recommend everyone support them!
+          </p>
+
+          <p>
+            home page illustrations are derivatives of
+            <a href="https://undraw.co/">undraw illustrations!</a> This is an
+            amazing resource and I highly recommend everyone support this
+            awesome project.
+          </p>
+        </section>
+
+        <section>
+          <h3>Contact</h3>
+          <hr />
+          <p>
+            Want a new coin added? Want to discuss the strategy? Want to work
+            together? Want to chat about something else?
+            <a href="mailto:alex.jeffrey.fryer@gmail.com">Email Me</a>
+          </p>
+        </section>
+
+        <section>
+          <h3>Disclosure</h3>
+          <hr />
+          <p>
+            This site doesn't manage money for you. It is just a mathematical
+            simulation of a hypothetical trading strategy. If you choose to
+            execute a strategy like anything you see on this site, please
+            understand that you may lose all your money. Unless you are working
+            with a professional, all trading you do is always at your own risk.
+            We don't claim that any data on this site is correct. It has not
+            been audited. But we are trying really hard to put out quality work.
+            Please get in touch for more details.
+          </p>
+        </section>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/backtester.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

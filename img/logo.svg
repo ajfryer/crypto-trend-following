@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>CRT-logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CRT-logo" fill-rule="nonzero">
+            <polyline id="Path" fill="#FF767F" points="3 13.5 0 16.44 0 8 3 8 3 13.5"></polyline>
+            <polyline id="Path" fill="#FFE79A" points="8 11.66 6.43 10.32 5 11.64 5 4 8 4 8 11.66"></polyline>
+            <polygon id="Path" fill="#57B894" points="10 13 10 0 13 0 13 10"></polygon>
+            <polyline id="Path" fill="#0074D9" points="15.81 9.81 14 8 19 8 19 13 17.21 11.21 10 18.36 6.53 15.34 2.75 19 0 19 6.47 12.66 10 15.64 15.81 9.81"></polyline>
+        </g>
+    </g>
+</svg>
